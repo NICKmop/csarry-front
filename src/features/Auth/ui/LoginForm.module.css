@@ -1,0 +1,94 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.inputGroup {
+    position: relative;
+    width: 100%;
+}
+.input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 0.25rem;
+    outline: none;
+}
+.input::placeholder {
+    color: #b0b0b0;
+}
+.passwordIcon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b0b0b0;
+    cursor: pointer;
+}
+.forgotPassword {
+    align-self: flex-end;
+    font-size: 0.875rem;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+.loginButton {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.loginButton:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.socialLogin {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+.socialIcon {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.signUp {
+    font-size: 0.875rem;
+    color: #b0b0b0;
+    margin-top: 1rem;   
+}
+
+.signUpLink {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.signUpLink:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+    .input {
+        padding: 1rem;
+        font-size: 1.125rem;
+    }
+    .loginButton {
+        padding: 1rem;
+        font-size: 1.125rem;
+    }
+}
