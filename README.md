@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# FSD pattern
+src/
+├── app/
+│   ├── App.tsx         # 앱의 루트 컴포넌트
+│   └── providers/      # 전역 컨텍스트, 라우터, 테마 제공
+│       └── AppRouter.tsx
+├── pages/
+│   ├── HomePage/       # 홈 페이지
+│   │   ├── ui/         # UI 컴포넌트
+│   │   └── index.tsx   # 페이지 진입점
+│   └── ProfilePage/    # 프로필 페이지
+├── features/
+│   ├── Auth/           # 인증 기능
+│   │   ├── ui/         # 로그인 폼 등 UI
+│   │   ├── model/      # 상태 관리, API 호출
+│   │   └── index.tsx   # 기능 내보내기
+│   └── PostCreate/     # 게시물 생성 기능
+├── entities/
+│   ├── User/           # 사용자 데이터 모델
+│   │   ├── model/      # 타입, API 로직
+│   │   ├── ui/         # 사용자 관련 UI (프로필 카드 등)
+│   │   └── index.ts    # 내보내기
+│   └── Post/           # 게시물 데이터 모델
+├── shared/
+│   ├── ui/             # 재사용 가능한 공통 컴포넌트 (Button, Input 등)
+│   ├── lib/            # 유틸리티 함수
+│   ├── api/            # API 클라이언트 (axios 등)
+│   └── config/         # 설정값
+└── index.tsx           # ReactDOM 렌더링
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+example Structure
+src/
+├── app/
+│   ├── styles/
+│   │   └── app.css         # 전역 스타일
+│   └── App.tsx
+├── features/
+│   └── Auth/
+│       ├── assets/
+│       │   └── lock-icon.svg
+│       ├── ui/
+│       │   ├── styles/
+│       │   │   └── LoginForm.css
+│       │   └── LoginForm.tsx
+│       └── index.tsx
+├── pages/
+│   └── HomePage/
+│       ├── assets/
+│       │   └── banner.jpg
+│       ├── ui/
+│       │   ├── styles/
+│       │   │   └── HomePage.css
+│       │   └── HomePage.tsx
+│       └── index.tsx
+├── shared/
+│   ├── assets/
+│   │   └── logo.png
+│   └── ui/
+│       ├── styles/
+│       │   └── button.css
+│       └── Button.tsx
+└── index.tsx
