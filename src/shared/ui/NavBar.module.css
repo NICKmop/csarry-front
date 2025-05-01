@@ -1,0 +1,64 @@
+/* Navigation Bar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logoImage {
+    width: 40px;
+    height: 40px;
+}
+
+.logoText {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.navLinks li a:hover {
+    color: #ffffff;
+}
+
+.searchLink {
+    font-size: 1.2rem;
+}
+
+.donateLink {
+    background-color: #004d7f;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+}
+
+.donateLink:hover {
+    background-color: #0066a1;
+}

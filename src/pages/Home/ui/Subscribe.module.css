@@ -1,0 +1,260 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1a1a2e 0%, #2a2a4e 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.logoText {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.navLinks {
+display: flex;
+gap: 1.5rem;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.navLinks li a {
+color: #b0b0b0;
+text-decoration: none;
+font-size: 1rem;
+}
+
+.navLinks li a:hover {
+color: #ffffff;
+}
+
+.walletLink {
+background-color: #333;
+color: #ffffff;
+padding: 0.5rem 1rem;
+border-radius: 0.25rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.walletLink:hover {
+background-color: #444;
+}
+
+/* Subscription Section */
+.subscribeSection {
+padding: 6rem 2rem;
+text-align: center;
+}
+
+.title {
+font-size: 3rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+.subtitle {
+font-size: 1.25rem;
+color: #b0b0b0;
+margin-bottom: 3rem;
+}
+
+.tiers {
+display: flex;
+justify-content: center;
+gap: 2rem;
+flex-wrap: wrap;
+}
+
+.tierCard {
+background-color: #2a2a4e;
+border-radius: 0.5rem;
+padding: 2rem;
+width: 100%;
+max-width: 350px;
+text-align: left;
+}
+
+.tierTitle {
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+.tierPrice {
+font-size: 2rem;
+font-weight: bold;
+color: #ffffff;
+margin-bottom: 1.5rem;
+}
+
+.benefitsList {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.benefitItem {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 1rem;
+color: #d0d0d0;
+margin-bottom: 0.75rem;
+}
+
+.checkmark {
+color: #00ff00;
+}
+
+/* Additional Content Sections */
+.contentSection {
+padding: 4rem 2rem;
+text-align: center;
+background-color: #1a1a2e;
+}
+
+.sectionTitle {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+.sectionDescription {
+font-size: 1.125rem;
+line-height: 1.5;
+margin-bottom: 2rem;
+color: #d0d0d0;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.learnMoreButton {
+display: inline-block;
+padding: 0.75rem 1.5rem;
+background-color: #4d94ff;
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 0.25rem;
+transition: background-color 0.3s;
+}
+
+.learnMoreButton:hover {
+background-color: #66a3ff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+.tiers {
+    flex-direction: column;
+    align-items: center;
+}
+
+.tierCard {
+    max-width: 500px;
+}
+}
+
+@media (max-width: 768px) {
+.nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.navLinks {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscribeSection {
+    padding: 4rem 1rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+}
+
+.tierTitle {
+    font-size: 1.25rem;
+}
+
+.tierPrice {
+    font-size: 1.5rem;
+}
+
+.benefitItem {
+    font-size: 0.875rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+}
+
+.sectionDescription {
+    font-size: 1rem;
+}
+
+.contentSection {
+    padding: 2rem 1rem;
+}
+}
+
+@media (max-width: 480px) {
+.title {
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+}
+
+.tierTitle {
+    font-size: 1rem;
+}
+
+.tierPrice {
+    font-size: 1.25rem;
+}
+
+.benefitItem {
+    font-size: 0.75rem;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+}
+
+.sectionDescription {
+    font-size: 0.875rem;
+}
+}

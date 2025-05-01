@@ -3,11 +3,11 @@ import styles from "./LoginForm.module.css";
 import { Link } from "react-router-dom";
 import { Button } from "../../../shared/ui/Button";
 import { FaAccusoft, FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
-interface LoginFormProps {
+interface SignUpFormProps {
     onSubmit: (evt:FormEvent<HTMLFormElement> ,link:string) => void;
 }
 
-const LoginForm = ({onSubmit} : LoginFormProps):JSX.Element => {
+const SignUpForm = ({onSubmit} : SignUpFormProps):JSX.Element => {
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onSubmit(e ,"/home");
@@ -15,6 +15,13 @@ const LoginForm = ({onSubmit} : LoginFormProps):JSX.Element => {
     return (
         <>
             <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.inputGroup}>
+                    <input 
+                        type="text" 
+                        placeholder="Name" 
+                        className={styles.input} 
+                    />
+                </div>
                 <div className={styles.inputGroup}>
                     <input 
                         type="email" 
@@ -30,25 +37,24 @@ const LoginForm = ({onSubmit} : LoginFormProps):JSX.Element => {
                     />
                     <span className={styles.passwordIcon}>👁️</span>
                 </div>
-                <Link to={"#"} className={styles.forgotPassword}>
-                    Forget password?
-                </Link>
-                <Button children={"LOGIN"} onClick={() => console.log("login")} />
+                <div className={styles.inputGroup}>
+                    <input 
+                        type="password" 
+                        placeholder="Confirm Password" 
+                        className={styles.input} 
+                    />
+                    <span className={styles.passwordIcon}>👁️</span>
+                </div>
+                <Button children={"SIGN UP"} onClick={() => console.log("sign up")} />
                 <div className={styles.socialLogin}>
                     <FaAccusoft className={styles.socialLogin}/>
                     <FaGoogle className={styles.socialLogin}/>
                     <FaGithub className={styles.socialLogin}/>
                     <FaFacebook className={styles.socialLogin}/>
                 </div>
-                {/* <p className={styles.signUp}>
-                    create Account?{' '}
-                    <Link to={"#"} className={styles.signUpLink}>
-                        Sign Up
-                    </Link>
-                </p> */}
             </form>
         </>
     )
 };
 
-export default LoginForm;
+export default SignUpForm;
